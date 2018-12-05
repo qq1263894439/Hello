@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
+//订单Controller
 @Controller
 @RequestMapping("/orders")
 public class OrdersController {
@@ -28,6 +29,14 @@ public class OrdersController {
         ModelAndView mv =new ModelAndView();
         mv.addObject("pageInfo",pageInfo);
         mv.setViewName("orders-list");
+        return mv;
+    }
+    @RequestMapping("/findById.do")
+    public ModelAndView findById(String id) throws Exception {
+        Orders orders = service.findById(id);
+        ModelAndView mv =new ModelAndView();
+        mv.addObject("orders",orders);
+        mv.setViewName("orders-show");
         return mv;
     }
 }

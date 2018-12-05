@@ -166,12 +166,12 @@
 			<!-- 内容头部 -->
 			<section class="content-header">
 				<h1>
-					数据管理 <small>数据列表</small>
+					产品管理 <small>产品列表</small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-					<li><a href="#">数据管理</a></li>
-					<li class="active">数据列表</li>
+					<li><a href="#">产品管理</a></li>
+					<li class="active">产品列表</li>
 				</ol>
 			</section>
 			<!-- 内容头部 /-->
@@ -319,12 +319,11 @@
 					<div class="box-footer">
 						<div class="pull-left">
 							<div class="form-group form-inline">
-								总共2 页，共14 条数据。 每页 <select class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
+								总共${pageInfo. pages}页，共${pageInfo.total}条数据。 每页
+								<select class="form-control" id="changePageSize" onchange="changePageSize()">
+                                    <c:forEach begin="1" end="5" var="num">
+                                        <option <c:if test="${pageInfo.size==num}">selected</c:if>>${num}</option>
+                                    </c:forEach>
 								</select> 条
 							</div>
 						</div>
@@ -342,8 +341,7 @@
 								<%--${pageInfo.pageNum+1}--%>
 								<li><a href="${pageContext.request.contextPath}/product/findAll.do?page=${pageInfo.pageNum+1}&size=${pageInfo.pageSize}">下一页</a></li>
 								<li>
-									<a href="${pageContext.request.contextPath}/product
-									/findAll.do?page=${pageInfo.pages}&size=${pageInfo.pageSize}" aria-label="Next">尾页</a>
+									<a href="${pageContext.request.contextPath}/product/findAll.do?page=${pageInfo.pages}&size=${pageInfo.pageSize}" aria-label="Next">尾页</a>
 								</li>
 							</ul>
 						</div>
@@ -470,7 +468,7 @@
             var pageSize = $("#changePageSize").val();
 
             //向服务器发送请求，改变没页显示条数
-            location.href = "${pageContext.request.contextPath}/orders/findAll.do?page=1&size="+pageSize;
+            location.href = "${pageContext.request.contextPath}/product/findAll.do?page=1&size="+pageSize;
         }
 		$(document).ready(function() {
 			// 选择框

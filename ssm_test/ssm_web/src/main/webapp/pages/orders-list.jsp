@@ -166,12 +166,12 @@
 			<!-- 内容头部 -->
 			<section class="content-header">
 				<h1>
-					数据管理 <small>数据列表</small>
+					订单管理 <small>订单列表</small>
 				</h1>
 				<ol class="breadcrumb">
 					<li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
-					<li><a href="#">数据管理</a></li>
-					<li class="active">数据列表</li>
+					<li><a href="#">订单管理</a></li>
+					<li class="active">订单列表</li>
 				</ol>
 			</section>
 			<!-- 内容头部 /-->
@@ -317,11 +317,9 @@
                         <div class="form-group form-inline">
                             总共${pageInfo. pages}页，共${pageInfo.total}条数据。 每页
                             <select class="form-control" id="changePageSize" onchange="changePageSize()">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+								<c:forEach begin="1" end="5" var="num">
+								<option <c:if test="${pageInfo.size==num}">selected</c:if>>${num}</option>
+								</c:forEach>
                             </select> 条
                         </div>
                     </div>

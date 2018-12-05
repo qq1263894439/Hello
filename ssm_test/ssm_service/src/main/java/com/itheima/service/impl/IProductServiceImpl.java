@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+
+//产品Service
 @Service
 @Transactional
 public class IProductServiceImpl implements IProductService {

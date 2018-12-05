@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Date;
 import java.util.List;
 
+//产品Controller
 @Controller
 @RequestMapping("/product")
 public class ProductController {

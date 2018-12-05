@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+//订单Service
 @Service
 public class IOrdersServiceImpl implements IOrdersService {
     @Autowired
@@ -18,5 +19,10 @@ public class IOrdersServiceImpl implements IOrdersService {
         //参数pageNum是页码值,pageSize是每页显示条数
         PageHelper.startPage(page,size);
         return dao.findAll();
+    }
+
+    @Override
+    public Orders findById(String id) throws Exception {
+        return dao.findById(id);
     }
 }

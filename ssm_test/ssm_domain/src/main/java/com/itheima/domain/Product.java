@@ -6,6 +6,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 /*会员表*/
 import java.util.Date;
 
+//产品表
 public class Product {
     private String id; // 主键
     private String productNum; // 编号 唯一

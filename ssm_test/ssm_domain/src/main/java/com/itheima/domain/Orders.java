@@ -7,12 +7,19 @@ import java.util.List;
 
 /*订单表*/
 public class Orders {
-    private String id;
-    private String orderNum;
-    private Date orderTime;
+    private String id; //无意义、主键uuid
+    private String orderNum; //订单编号 不为空 唯一
+    private Date orderTime; //下单时间
     private String orderTimeStr;
-    private int orderStatus;
-    private String orderStatusStr;
+    private int orderStatus;//订单状态(0 未支付 1 已支付)
+    private String orderStatusStr;//订单状态控制
+    private int peopleCount;//出行人数
+    private Product product;//产品id 外键
+    private List<Traveller> travellers;
+    private Member member;//会员(联系人）id 外键
+    private Integer payType;//支付方式(0 支付宝 1 微信 2其它)
+    private String payTypeStr;//支付方式控制
+    private String orderDesc;//订单描述(其它信息)
 
     public String getOrderStatusStr() {
         if(orderStatus==0){
@@ -26,14 +33,6 @@ public class Orders {
     public void setOrderStatusStr(String orderStatusStr) {
         this.orderStatusStr = orderStatusStr;
     }
-
-    private int peopleCount;
-    private Product product;
-    private List<Traveller> travellers;
-    private Member member;
-    private Integer payType;
-    private String payTypeStr;
-    private String orderDesc;
 
     public String getId() {
         return id;

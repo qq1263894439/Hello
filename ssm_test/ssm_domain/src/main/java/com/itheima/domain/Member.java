@@ -1,11 +1,12 @@
 package com.itheima.domain;
 
+//会员表
 public class Member {
-    private String id;
-    private String name;
-    private String nickname;
-    private String phoneNum;
-    private String email;
+    private String id;//无意义、主键uuid
+    private String name;//姓名
+    private String nickname;//昵称
+    private String phoneNum;//电话号码
+    private String email;//邮箱
 
     public String getId() {
         return id;
