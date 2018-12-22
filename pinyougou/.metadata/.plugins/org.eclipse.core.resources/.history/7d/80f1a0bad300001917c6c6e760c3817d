@@ -1,0 +1,12 @@
+app.controller('indexController',function($scope, loginService){
+	//读取当前登录人
+	$scope.showLoginName=function(){
+		$http.get('../login/name.do').loginName().success(
+				function(response){
+					$scope.loginName=response.loginName;
+				}
+	);
+	}
+	
+	
+});

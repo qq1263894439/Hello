@@ -1,0 +1,7 @@
+package com.pinyougou.shop.status;
+
+public class StaticStatus {
+	private String pass;
+	private String fail;
+	
+}

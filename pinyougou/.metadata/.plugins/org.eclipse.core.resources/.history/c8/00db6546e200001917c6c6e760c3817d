@@ -1,0 +1,6 @@
+package com.pinyougou.show.status;
+
+public enum StaticStatus {
+	authstr("待审核","0");
+	
+}

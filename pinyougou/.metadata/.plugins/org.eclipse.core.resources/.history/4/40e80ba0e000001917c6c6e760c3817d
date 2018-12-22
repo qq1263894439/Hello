@@ -1,0 +1,28 @@
+package com.pinyougou.shop.status;
+
+public class StaticStatus {
+	private String pass;//通过
+	private String fail;//未通过
+	private String authstr;//待审核
+	public String getPass() {
+		return pass;
+	}
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+	public String getFail() {
+		return fail;
+	}
+	public void setFail(String fail) {
+		this.fail = fail;
+	}
+	public String getAuthstr() {
+		return authstr;
+	}
+	public void setAuthstr(String authstr) {
+		this.authstr = authstr;
+	}
+	
+	
+	
+}

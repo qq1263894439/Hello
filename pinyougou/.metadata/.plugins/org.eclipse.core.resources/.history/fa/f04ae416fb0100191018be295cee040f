@@ -1,0 +1,11 @@
+package com.pinyougou.shop.controller;
+/**
+ * 文件上传
+ * @author asus
+ *
+ */
+public class UploadController {
+
+	
+	private String FILE_SERVER_URL;//文件服务器地址
+}

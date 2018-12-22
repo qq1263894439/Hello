@@ -1,0 +1,9 @@
+package com.pinyougou.service;
+/**
+ * 认证类
+ * @author asus
+ *
+ */
+public class UserDetailsServiceImpl {
+
+}
